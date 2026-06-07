@@ -484,7 +484,7 @@ export default function ClienteDetailPage({ params }) {
         <form onSubmit={saveServicio} className="flex flex-col gap-4 pb-2">
           <div><label className="label">Nombre del servicio *</label><input type="text" className="input" placeholder="Ej. Tinte completo + Peinado" value={servForm.nombre} onChange={e => setServForm(f => ({ ...f, nombre: e.target.value }))} /></div>
           <div><label className="label">Costo total *</label><input type="number" className="input" placeholder="0.00" step="0.01" value={servForm.costo_total} onChange={e => setServForm(f => ({ ...f, costo_total: e.target.value }))} /></div>
-          <div><label className="label">Notas</label><textarea className="input" rows={3} placeholder="Detalles o especificaciones adicionales..." value={servForm.notes} onChange={e => setServForm(f => ({ ...f, notes: e.target.value }))} /></div>
+          <div><label className="label">Notas</label><textarea className="input" rows={3} placeholder="Detalles o especificaciones adicionales..." value={servForm.notas} onChange={e => setServForm(f => ({ ...f, notas: e.target.value }))} /></div>
           <button type="submit" className="btn-primary w-full justify-center" disabled={saving}>{saving ? 'Guardando...' : 'Registrar servicio'}</button>
         </form>
       </BottomSheet>
